@@ -10,7 +10,7 @@ Print messages like lsb init-functions
 
 
 import sys
-from . import colors
+import colors
 
 MESSAGE = ""
 
@@ -30,7 +30,7 @@ class LOG():
     pass
 
 
-for elem in list(MESSAGE_LOG.keys()):
+for elem in MESSAGE_LOG.keys():
     setattr(LOG, MESSAGE_LOG[elem][0], elem)
 
 
@@ -94,7 +94,7 @@ def log_end_message(log):
     End a log message with a status
     defined by log
     """
-    if not log in list(MESSAGE_LOG.keys()):
+    if not log in MESSAGE_LOG.keys():
         log = -1
 
     res = colors.color_text(*MESSAGE_LOG[log][1])
@@ -146,7 +146,7 @@ def add_log_type(name, display, color, bcolor):
     global MESSAGE_LOG
     v_name = name.replace(" ", "_").upper()
     val = 0
-    lkey = list(MESSAGE_LOG.keys())
+    lkey = MESSAGE_LOG.keys()
     while val in lkey:
         val += 1
 

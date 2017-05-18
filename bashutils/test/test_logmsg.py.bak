@@ -4,7 +4,7 @@ from bashutils import logmsg
 
 
 def test():
-    print("COMPLETE PREDEFINED LOG")
+    print "COMPLETE PREDEFINED LOG"
     logmsg.log_success_msg("This is a success message")
     logmsg.log_info_msg("This is an info message")
     logmsg.log_warning_msg("This is an warning message")

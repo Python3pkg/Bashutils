@@ -77,11 +77,11 @@ def color_text(text, color="none", bcolor="none", effect="none"):
     if not istty or not COLOR_ON:
         return text
     else:
-        if not effect in list(COLOR_EFFET.keys()):
+        if not effect in COLOR_EFFET.keys():
             effect = "none"
-        if not color in list(COLOR_CODE_TEXT.keys()):
+        if not color in COLOR_CODE_TEXT.keys():
             color = "none"
-        if not bcolor in list(COLOR_CODE_BG.keys()):
+        if not bcolor in COLOR_CODE_BG.keys():
             bcolor = "none"
 
         v_effect = COLOR_EFFET[effect]
